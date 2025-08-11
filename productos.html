@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JUGUETERIA JJN - Juguetería Extraordinaria</title>
+    <enlace href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="hoja de estilo">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Elementos flotantes decorativos -->
+    <div class="floating-toys">🧸</div>
+    <div class="floating-toys">🚁</div>
+    <div class="floating-toys">🤖</div>
+    <div class="floating-toys">🚗</div>
+    <div class="floating-toys">🛩️</div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+      <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+          <div class="container my-4"><br>
+            <br>
+            <br>
+            <div class="logo"><i class="fas fa-rocket me-3"></i>JUGUETERIA JJN</div>
+            <div class="tagline">Juguetes Extraordinarios del 2025</div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="container my-4" >
+          <ul class="nav nav-expand-lg navbar-light fixed-top justify-content-center " id="categoryTabs">
+            <a href="index.html" class="btn btn-success position-fixed top-0 start-0 m-2">⬅️Regresar</a>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#" data-category="all">
+                <i class="fas fa-star"></i> Todos
+              </a>
+            </li>
+            
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="vehicles">
+                <i class="fas fa-car"></i> Vehículos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="avion">
+                <i class="fas fa-avion"></i> Aviones
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="toys">
+                <i class="fas fa-gamepad"></i> Juguetes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="baby">
+                <i class="fas fa-baby"></i> Bebes LLorones
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-category="Peluches">
+                <i class="fas fa-fire"></i> Peluches
+              </a>
+            </li>
+            <!-- Botón de cambio de tema -->
+            <button type="button" class="btn btn-secondary theme-toggle" 
+                    onclick="toggleTheme()"
+                    aria-label="Cambiar tema de colores"
+                    title="Alternar entre tema claro y oscuro">
+                <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+            </button>
+          </ul>
+        </div>
+        
+
+        <!-- Products Grid -->
+        <!-- Products Grid -->
+    <div class="container">
+      <div class="row" id="productsGrid">
+        <!-- Helicóptero - CAMBIADO A TOYS -->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="avion">
+          <div class="card product-card featured-card position-relative h-100">
+            <div class="product-badge">¡ÉPICO!</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/helicoptero.png" alt="Helicóptero 2 Plazas" class="card-img-top" 
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-helicopter me-2"></i>Helicóptero 2 Plazas
+              </h5>
+              <p class="product-description">
+                Construye tu propio helicóptero real con capacidad para dos personas. Kit completo con chasis reforzado, rotor principal, palas de fibra de carbono y sistema de navegación GPS.
+              </p>
+              <div class="product-price">39.00 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avión de Combate - CAMBIADO A AVION -->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="avion">
+          <div class="card product-card featured-card position-relative h-100">
+            <div class="product-badge">¡EXCLUSIVO!</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/avion.jpg" alt="Avión de Combate 2 Plazas" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-fighter-jet me-2"></i>Avión de Combate 2 Plazas
+              </h5>
+              <p class="product-description">
+                Kit avanzado para construir un avión de combate real. Incluye fuselaje aerodinámico, motor a reacción y sistema de control de vuelo digital.
+              </p>
+              <div class="product-price">35.00 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bebés - CAMBIADO A BABY -->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="baby">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">NUEVO</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/bebe lloron.avif" alt="Muñeco Bebe - Juguete con Sonido" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-baby me-2"></i>Muñeco Bebe - Juguete con Sonido
+              </h5>
+              <p class="product-description">
+                Incluye 1 Bebe Llorón con Chupón. Sonidos: "Mamá", "Papá", Llora. Medida: 25 cm. Material: Caucho de alta calidad.
+              </p>
+              <div class="product-price">$35.00</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-category="baby">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">NUEVO</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/nenuco.webp" alt="Muñeco Bebe - Juguete con Sonido" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-baby me-2"></i>Muñeco Nenuco - Juguete con Sonido
+              </h5>
+              <p class="product-description">
+                Bebe con Sonidos: "Llora", "Canta", "Habla", "Rie", " Chupa el biberon" Medida: 32 cm. Material: Silicona de alta calidad.
+              </p>
+              <div class="product-price">$135.00</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--Peluches - YA ESTABA CORRECTO-->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="Peluches">
+          <div class="card product-card crazy-card position-relative h-100">
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/stich.jpg" alt="Peluche Gigante 1.5m" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-paw me-2"></i>Peluche Stitch 45cm
+              </h5>
+              <p class="product-description">
+                Peluches Stitch de Disney Heart 45cm. Detalles: Peluche.Diseño: Stitch.Tamaño: 45cm
+              </p>
+              <div class="product-price">29.99 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-category="Peluches">
+          <div class="card product-card crazy-card position-relative h-100">
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/capibara.webp" alt="Peluche Gigante 1.8m" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-paw me-2"></i>Peluche Capibara 1.5m
+              </h5>
+              <p class="product-description">
+                Diseño Adorable: El peluche capibara de 1.5m presenta un diseño encantador y detallado, con una expresión dulce y una mochila de tortuga integrada.
+              </p>
+              <div class="product-price">29.99 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehículos - YA ESTABA CORRECTO -->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="vehicles">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">NUEVO</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/rayo queen.webp" alt="Carro Eléctrico" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-bolt me-2"></i>Carro Eléctrico
+              </h5>
+              <p class="product-description">
+                Formato de venta: Unidad. Personaje: Rayo McQueen. Está hecho con plástico. Tiene 6.5cm de alto x 9cm de ancho x 28cm de largo.
+              </p>
+              <div class="product-price"> 59.99 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-category="vehicles">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">NUEVO</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/bolqueta.webp" alt="Carro Eléctrico" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-bolt me-2"></i>Carro Fricción Volqueta
+              </h5>
+              <p class="product-description">
+                Carro fricción volqueta, las piezas del vehículo de la estructura pueden moverse
+              </p>
+              <div class="product-price"> 15.99 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--muñecas - CAMBIADO A BABY (porque van con bebés llorones)-->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="baby">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">NUEVO</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/muñeca.webp" alt="Muñeca con Accesorios" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-doll me-2"></i>Muñeca con Accesorios
+              </h5>
+              <p class="product-description">
+                Incluye 1 muñeca, 1 vestido, 1 par de zapatos, 1 bolso y 1 peina. Medida: 30 cm. Material: Plástico de alta calidad.
+              </p>
+              <div class="product-price">20.00 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4" data-category="baby">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">NUEVO</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/juguete_casa-muneca.webp" alt="Muñeca con Accesorios" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-doll me-2"></i>Juguete casa de muñeca
+              </h5>
+              <p class="product-description">
+                Incluye 1 muñeca, 1 casa, utencillos de cocina, Medida: 15 cm. Material: Plástico de alta calidad.
+              </p>
+              <div class="product-price">20.00 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--sonajero juguete - CAMBIADO A BABY-->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="baby">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">NUEVO</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/sonajero.jpg" alt="Sonajero Juguete" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-baby me-2"></i>Sonajero Juguete
+              </h5>
+              <p class="product-description">
+                Incluye 1 sonajero, 1 mordedor y 1 peluche. Medida: 20 cm. Material: Plástico de alta calidad.
+              </p>
+              <div class="product-price">10.00 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dinosaurio Pleo - CAMBIADO A TOYS -->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="toys">
+          <div class="card product-card crazy-card position-relative h-100">
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/dinosaurio.jpg" alt="Dinosaurio Pleo" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-dragon me-2"></i>Dinosaurio Pleo
+              </h5>
+              <p class="product-description">
+                Robot interactivo con IA que aprende comportamientos. Equipado con sensores táctiles, cámaras y reconocimiento de voz.
+              </p>
+              <div class="product-price">19.99 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drone de Carrera - CAMBIADO A TOYS -->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="avion">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">ALTA VELOCIDAD</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=250&fit=crop" alt="Dron de Carrera 4K" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-plane me-2"></i>Dron de Carrera 4K
+              </h5>
+              <p class="product-description">
+                Diseñado para velocidad y maniobras precisas. Cámara 4K UHD, transmisión en tiempo real, GPS y sensores anticolisión.
+              </p>
+              <div class="product-price">64.99 $</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tanque RC - YA ESTABA CORRECTO -->
+        <div class="col-lg-4 col-md-6 mb-4" data-category="toys">
+          <div class="card product-card position-relative h-100">
+            <div class="product-badge">POPULAR</div>
+            <div class="product-icon" style="overflow: hidden; height: 250px;">
+              <img src="imag/tanquero.webp" alt="Tanque RC 53cm" class="card-img-top"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;" />
+            </div>
+            <div class="card-body">
+              <h5 class="product-title">
+                <i class="fas fa-shield-alt me-2"></i>Tanque RC 53cm
+              </h5>
+              <p class="product-description">
+                Réplica a escala de tanque de combate. Control remoto de largo alcance, torreta giratoria 360° y disparo de proyectiles.
+              </p>
+              <div class="product-price"> 49.99$</div>
+              <button class="btn btn-add-cart w-100 mt-3">
+                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Disclaimer -->
+        <div class="container">
+          <div class="disclaimer">
+            <i class="fas fa-info-circle me-2"></i>
+            <strong>Nota:</strong> Todos los productos son ficticios y creados
+            para fines de demostración de una juguetería moderna con Bootstrap.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Funcionalidad de filtros
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("#categoryTabs .nav-link");
+        const products = document.querySelectorAll("[data-category]");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            // Remover clase active de todos los links
+            navLinks.forEach((l) => l.classList.remove("active"));
+            // Agregar clase active al link clickeado
+            link.classList.add("active");
+
+            const category = link.getAttribute("data-category");
+
+            products.forEach((product) => {
+              const productContainer = product.closest(".col-lg-4");
+              if (
+                category === "all" ||
+                product.getAttribute("data-category") === category
+              ) {
+                productContainer.style.display = "block";
+                // Animación de entrada
+                setTimeout(() => {
+                  product.style.transform = "scale(1)";
+                  product.style.opacity = "1";
+                }, 100);
+              } else {
+                productContainer.style.display = "none";
+              }
+            });
+          });
+        });
+
+        // Efecto de hover en las tarjetas
+        const cards = document.querySelectorAll(".product-card");
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.zIndex = "10";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.zIndex = "1";
+          });
+        });
+      });
+      
+      // Animación de elementos al scroll
+      window.addEventListener("scroll", () => {
+        const cards = document.querySelectorAll(".product-card");
+        cards.forEach((card) => {
+          const cardTop = card.getBoundingClientRect().top;
+          const cardVisible = 150;
+
+          if (cardTop < window.innerHeight - cardVisible) {
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          }
+        });
+      });
+    </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll("#categoryTabs .nav-link");
+    const products = document.querySelectorAll("#productsGrid .col-lg-4");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Quitar clase activa a todos
+        tabs.forEach((t) => t.classList.remove("active"));
+
+        // Agregar clase activa al tab actual
+        tab.classList.add("active");
+
+        const selectedCategory = tab.getAttribute("data-category");
+
+        products.forEach((product) => {
+          const productCategory = product.getAttribute("data-category");
+
+          // Mostrar todos si es "all"
+          if (selectedCategory === "all" || selectedCategory === productCategory) {
+            product.style.display = "block";
+          } else {
+            product.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+  
+</script>
+<script src="theme-toggle.js"></script>
+<script src="voice-commands.js"></script>
+<script src="keyboard-shortcuts.js"></script>
+</body>
+</html>

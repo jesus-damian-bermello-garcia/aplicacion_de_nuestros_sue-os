@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JUGUETERIA JJN - Regalos Mágicos para Niños</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+   
+
+</head>
+    <body data-bs-theme="light">
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header con navegación -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #38b65e;">
+    <div class="container">
+        <a class="navbar-brand text-dark" href="#" aria-label="ToyLand - Ir al inicio">
+            <i class="fas fa-gift me-2" aria-hidden="true"></i>
+            JUGUETERIA JJN
+        </a>
+                
+                <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Alternar menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#main-content">
+                                <i class="fas fa-home me-1" aria-hidden="true"></i>
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="#products-section">
+                            <i class="fas fa-gamepad me-1" aria-hidden="true"></i>
+                            Productos
+                        </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#categories-section">
+                                <i class="fas fa-th-large me-1" aria-hidden="true"></i>
+                                Categorías
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-section">
+                                <i class="fas fa-envelope me-1" aria-hidden="true"></i>
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    
+                        </div>
+                        <a href="login.html" class="btn btn-outline-primary">
+                            <i class="fas fa-sign-in-alt me-1" aria-hidden="true"></i>
+                            Iniciar Sesión
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main id="main-content" tabindex="-1">
+        <!-- Sección Hero -->
+        <section class="hero-section" aria-labelledby="hero-heading">
+            <div class="container my-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-6"><br>
+                        <h1 id="hero-heading" class="display-4 fw-bold">
+                            Regalos Mágicos para los más Pequeños de la Casa 
+                        </h1>
+                        <p class="lead mb-4">
+                            Descubre juguetes educativos, creativos y divertidos. 
+                            Cada regalo está pensado para desarrollar la imaginación 
+                            y felicidad de los niños de todas las edades.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="productos.html" class="btn btn-warning btn-lg" 
+                            aria-describedby="shop-help">
+                                <i class="fas fa-shopping-bag me-2" aria-hidden="true"></i>
+                                Ver Productos
+                            </a>
+                        </div>
+                        <div id="shop-help" class="sr-only">
+                            Este botón te llevará directamente a nuestra selección de productos
+                        </div>
+                        <br>
+
+                    </div>
+                    
+            
+                    <div class="col-lg-6">
+                        <img src="imag/niños..jpg" 
+                             class="img-fluid rounded-3 shadow-lg"
+                             alt="Niños sonrientes jugando con juguetes coloridos y educativos">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Categorías -->
+        <section id="categories-section" class="py-5" aria-labelledby="categories-heading">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 id="categories-heading" class="display-5 fw-bold">Explora por Categorías</h2>
+                    <p class="lead text-muted">Encuentra el regalo perfecto según la edad y los intereses</p>
+                </div>
+                
+                <div class="row g-4" id="categories-container">
+                    <!-- Las categorías se cargan dinámicamente -->
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Sección de Filtros y Productos -->
+        <section id="products-section" class="py-5 bg-secondary" aria-labelledby="products-heading">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 id="products-heading" class="display-5 fw-bold">Productos Destacados</h2>
+                    <p class="lead text-muted">Los favoritos de padres e hijos</p>
+                </div>
+
+                <!-- Filtros -->
+                <div class="filter-section">
+                    <form id="filters-form" aria-label="Filtros de productos">
+                        <div class="row g-3 align-items-end">
+                            <div class="col-md-3">
+                                <label for="age-filter" class="form-label fw-bold">
+                                    <i class="fas fa-birthday-cake me-1" aria-hidden="true"></i>
+                                    Edad
+                                </label>
+                                <select class="form-select" id="age-filter" aria-describedby="age-help">
+                                    <option value="">Todas las edades</option>
+                                    <option value="0-2">0-2 años</option>
+                                    <option value="3-5">3-5 años</option>
+                                    <option value="6-8">6-8 años</option>
+                                    <option value="9-12">9-12 años</option>
+                                    <option value="13+">13+ años</option>
+                                </select>
+                                <div id="age-help" class="form-text">Filtra por rango de edad apropiado</div>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <label for="category-filter" class="form-label fw-bold">
+                                    <i class="fas fa-tags me-1" aria-hidden="true"></i>
+                                    Categoría
+                                </label>
+                                <select class="form-select" id="category-filter">
+                                    <option value="">Todas las categorías</option>
+                                    <option value="educativo">Educativo</option>
+                                    <option value="creativo">Creativo</option>
+                                    <option value="deportivo">Deportivo</option>
+                                    <option value="tecnologico">Tecnológico</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <label for="price-filter" class="form-label fw-bold">
+                                    <i class="fas fa-dollar-sign me-1" aria-hidden="true"></i>
+                                    Precio máximo
+                                </label>
+                                <input type="range" class="form-range" id="price-filter" 
+                                       min="0" max="200" value="200" 
+                                       aria-describedby="price-value">
+                                <div id="price-value" class="form-text">$200</div>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary w-100" onclick="applyFilters()">
+                                    <i class="fas fa-filter me-2" aria-hidden="true"></i>
+                                    Aplicar Filtros
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Productos -->
+                <div class="row g-4" id="products-container">
+                    <!-- Los productos se cargan dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto/Newsletter -->
+        <section id="contact-section" class="py-5" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 id="contact-heading" class="display-5 fw-bold">¡Mantente Conectado!</h2>
+                            <p class="lead text-muted">
+                                Recibe ofertas especiales, nuevos productos y consejos para padres
+                            </p>
+                        </div>
+                        
+                        <form id="newsletter-form" novalidate class="needs-validation">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="parent-name" class="form-label">
+                                        Nombre del padre/madre *
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control form-control-lg" 
+                                           id="parent-name"
+                                           placeholder="Tu nombre completo"
+                                           required>
+                                    <div class="invalid-feedback" role="alert">
+                                        Por favor ingresa tu nombre
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="email-newsletter" class="form-label">
+                                        Email *
+                                    </label>
+                                    <input type="email" 
+                                           class="form-control form-control-lg" 
+                                           id="email-newsletter"
+                                           placeholder="tu@email.com"
+                                           aria-describedby="email-help"
+                                           required>
+                                    <div id="email-help" class="form-text">
+                                        Solo enviaremos contenido relevante, sin spam
+                                    </div>
+                                    <div class="invalid-feedback" role="alert">
+                                        Por favor ingresa un email válido
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="child-age" class="form-label">
+                                        Edad de tu hijo/a (opcional)
+                                    </label>
+                                    <select class="form-select form-select-lg" id="child-age">
+                                        <option value="">Selecciona una edad</option>
+                                        <option value="0-2">0-2 años</option>
+                                        <option value="3-5">3-5 años</option>
+                                        <option value="6-8">6-8 años</option>
+                                        <option value="9-12">9-12 años</option>
+                                        <option value="13+">13+ años</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacy-check" required>
+                                        <label class="form-check-label" for="privacy-check">
+                                            Acepto los <a href="#" class="text-primary">términos y condiciones</a> 
+                                            y la <a href="#" class="text-primary">política de privacidad</a> *
+                                        </label>
+                                        <div class="invalid-feedback" role="alert">
+                                            Debes aceptar los términos y condiciones
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="fas fa-paper-plane me-2" aria-hidden="true"></i>
+                                        Suscribirse Gratis
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h4 mb-3">
+                        <i class="fas fa-gift me-2" aria-hidden="true"></i>
+                        JUGUETERIA JJN
+                    </h3>
+                    <p class="mb-3">
+                        Regalos especiales para momentos especiales. 
+                        Comprometidos con la felicidad y desarrollo de los niños.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light" aria-label="Síguenos en Facebook">
+                            <i class="fab fa-facebook-f fa-lg" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="text-light" aria-label="Síguenos en Instagram">
+                            <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="text-light" aria-label="Síguenos en Twitter">
+                            <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h4 class="h5 mb-3">Ayuda</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Envíos y Devoluciones</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Guía de Tallas</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Seguridad</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Soporte</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3">
+                    <h4 class="h5 mb-3">Contactos</h4>
+                    <address>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>
+                            Calle Mariscal Sucre, Quito, Ecuador
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-phone me-2" aria-hidden="true"></i>
+                            <a href="tel:+34912345678" class="text-light text-decoration-none">
+                                0912345678
+                            </a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                            <a href="mailto:jugueteriajjn@yahoo.com" class="text-light text-decoration-none">
+                                jugueteriajjn@yahoo.com
+                            </a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-3">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Jugueteria JJN. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">Privacidad</a>
+                    <a href="#" class="text-light text-decoration-none me-3">Términos</a>
+                    <a href="#" class="text-light text-decoration-none">Accesibilidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carrito flotante -->
+    <button type="button" class="btn btn-primary cart-float" 
+            onclick="openCart()"
+            aria-label="Abrir carrito de compras"
+            title="Ver carrito de compras">
+        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+        <span class="cart-count" id="cart-count" aria-label="Artículos en el carrito">0</span>
+    </button>
+
+    <!-- Botón de cambio de tema -->
+    <button type="button" class="btn btn-secondary theme-toggle" 
+            onclick="toggleTheme()"
+            aria-label="Cambiar tema de colores"
+            title="Alternar entre tema claro y oscuro">
+        <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
+    </button>
+
+    <!-- Modal de búsqueda -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h4" id="searchModalLabel">
+                        <i class="fas fa-search me-2" aria-hidden="true"></i>
+                        Buscar Productos
+                    </h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar búsqueda">
+         <!-- Bootstrap JS -->
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js">
+</script>
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+</script>
+<script>
+// Lista de categorías
+const categorias = [
+    { nombre: "Peluches", icono: "fa-solid fa-paw" },
+    { nombre: "Aviones" , icono: "fa-solid fa-plane" },
+    { nombre: "Vehículos", icono: "fa-solid fa-car" },
+    { nombre: "Bebes llorones", icono: "fa-solid fa-child" },
+    { nombre: "Juguetes", icono: "fa-solid fa-cube" },
+    
+    
+];
+
+const container = document.getElementById("categories-container");
+
+categorias.forEach(cat => {
+    container.innerHTML += `
+        <div class="col-md-4 col-lg-3">
+            <div class="card text-center shadow-sm h-100 border-0">
+                <div class="card-body">
+                    <i class="${cat.icono} fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">${cat.nombre}</h5>
+                </div>
+            </div>
+        </div>
+    `;
+});
+</script>
+<script>
+function verificarRegistro(event, destino) {
+    const registrado = localStorage.getItem("isLoggedIn") === "true";
+    if (!registrado) {
+        event.preventDefault(); // Evita que se abra el enlace
+        alert("Debes registrarte antes de acceder a esta sección.");
+        // Aquí podrías abrir el modal de registro si tienes uno
+        return false;
+    }
+    window.location.href = destino; // Si está registrado, lo llevamos al enlace
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+            bsCollapse.hide();
+        });
+    });
+});
+</script>
+<script>
+// Simulación: si el usuario inicia sesión
+
+let usuarioRegistrado = false; 
+
+function verificarAcceso(event, destino) {
+    if (!usuarioRegistrado) {
+        event.preventDefault();
+        alert("Debes registrarte antes de acceder a esta sección.");
+        // Aquí puedes abrir un modal de registro si lo tienes
+        return;
+    }
+
+    // Si es un enlace normal
+    if (destino.startsWith("http") || destino.endsWith(".html")) {
+        window.location.href = destino;
+    } else {
+        // Si es un id de sección, hacemos scroll suave
+        document.querySelector(destino).scrollIntoView({ behavior: "smooth" });
+    }
+}
+</script>
+<script src="theme-toggle.js"></script>
+<script src="voice-commands.js"></script>
+<script src="keyboard-shortcuts.js"></script>
+</body>
+</html>                
